@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: [],
   theme: {
@@ -12,6 +14,13 @@ export default {
         xl: "1200px",
       },
     },
+
+    extend: {
+      fontFamily: {
+        sans: ['"Fira Code Regular"', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
+
   plugins: [],
 };
