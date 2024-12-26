@@ -15,5 +15,6 @@
 @layer base {
   html {
     font-family: "Fira Code Regular", system-ui, sans-serif;
+    @apply block bg-tokyo-storm text-tokyo-white;
   }
 }
