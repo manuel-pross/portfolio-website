@@ -6,8 +6,10 @@ describe("Header Component", () => {
   it("renders the header component with correct content", () => {
     render(<Header />);
 
-    const header = screen.getByText("Manuel");
+    const heading = screen.getByText("Manuel", { selector: "h1" });
+    const span = screen.getByText(".", { selector: "span" });
 
-    expect(header).toBeInTheDocument();
+    expect(heading).toBeInTheDocument;
+    expect(span).toBeInTheDocument;
   });
 });
