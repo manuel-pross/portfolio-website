@@ -3,7 +3,6 @@ import DesktopNav from "./desktop-nav";
 import MobileNav from "./mobile-nav";
 
 const links: NavBarLink[] = [
-  { label: "header", ref: "header" },
   { label: "work experience", ref: "work-experience" },
   { label: "education", ref: "education" },
   { label: "projects", ref: "projects" },
@@ -12,11 +11,11 @@ const links: NavBarLink[] = [
 const Nav = () => {
   return (
     <>
-      <div className="hidden xl:flex">
+      <div className="hidden xl:flex" data-testid="desktop-nav-wrapper">
         <DesktopNav links={links} />
       </div>
-      <div className="xl:hidden">
-        <MobileNav />
+      <div className="xl:hidden" data-testid="mobile-nav-wrapper">
+        <MobileNav links={links} />
       </div>
     </>
   );

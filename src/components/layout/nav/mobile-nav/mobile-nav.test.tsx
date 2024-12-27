@@ -1,13 +1,25 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import MobileNav from ".";
+import { testLinks } from "../../../../tests/data/links";
 
 describe("MobileNav component", () => {
-  it("Renders the MobileNav component with correct content", () => {
-    render(<MobileNav />);
+  it("Renders provided amount of links", () => {
+    render(<MobileNav links={testLinks} />);
 
-    const content = screen.getByText("MobileNav", { selector: "div" });
+    const navBarLinks = screen.getAllByTestId("navbar-link");
 
-    expect(content).toBeInTheDocument();
+    expect(navBarLinks).toHaveLength(3);
+  });
+
+  it("Renders provided links with correct content", () => {
+    render(<MobileNav links={testLinks} />);
+
+    const navBarLinks = screen.getAllByTestId("navbar-link");
+
+    expect(navBarLinks[0]).toHaveTextContent("link1");
+    expect(navBarLinks[0]).toHaveAttribute("href", "linkRef1");
+    expect(navBarLinks[1]).toHaveTextContent("link2");
+    expect(navBarLinks[1]).toHaveAttribute("href", "linkRef2");
   });
 });

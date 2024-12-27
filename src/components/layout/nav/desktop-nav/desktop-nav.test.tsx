@@ -4,14 +4,6 @@ import { render, screen } from "@testing-library/react";
 import { testLinks } from "../../../../tests/data/links";
 
 describe("DesktopNav component", () => {
-  it("Renders the DesktopNav component", () => {
-    render(<DesktopNav links={testLinks} />);
-
-    const content = screen.getByTestId("desktop-nav");
-
-    expect(content).toBeInTheDocument();
-  });
-
   it("Renders provided amount of links", () => {
     render(<DesktopNav links={testLinks} />);
 

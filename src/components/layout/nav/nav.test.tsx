@@ -1,13 +1,18 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import Nav from ".";
 import { render, screen } from "@testing-library/react";
 
 describe("Nav component", () => {
-  it("Renders the Nav component with correct content", () => {
+  beforeEach(() => {
+    window.innerWidth = 1024;
+    window.dispatchEvent(new Event("resize"));
+  });
+
+  it("Renders the Nav component with both navigations (desktop and mobile)", () => {
     render(<Nav />);
 
-    const desktopNav = screen.getByText("DesktopNav", { selector: "div" });
-    const mobileNav = screen.getByText("MobileNav", { selector: "div" });
+    const desktopNav = screen.getByTestId("desktop-nav");
+    const mobileNav = screen.getByTestId("mobile-nav");
 
     expect(desktopNav).toBeInTheDocument();
     expect(mobileNav).toBeInTheDocument();
