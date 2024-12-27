@@ -7,8 +7,27 @@ describe("DesktopNav component", () => {
   it("Renders the DesktopNav component", () => {
     render(<DesktopNav links={testLinks} />);
 
-    const content = screen.getByText("DesktopNav", { selector: "div" });
+    const content = screen.getByTestId("desktop-nav");
 
     expect(content).toBeInTheDocument();
+  });
+
+  it("Renders provided amount of links", () => {
+    render(<DesktopNav links={testLinks} />);
+
+    const navBarLinks = screen.getAllByTestId("navbar-link");
+
+    expect(navBarLinks).toHaveLength(3);
+  });
+
+  it("Renders provided links with correct content", () => {
+    render(<DesktopNav links={testLinks} />);
+
+    const navBarLinks = screen.getAllByTestId("navbar-link");
+
+    expect(navBarLinks[0]).toHaveTextContent("link1");
+    expect(navBarLinks[0]).toHaveAttribute("href", "linkRef1");
+    expect(navBarLinks[2]).toHaveTextContent("link3");
+    expect(navBarLinks[2]).toHaveAttribute("href", "linkRef3");
   });
 });
