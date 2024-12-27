@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <>
       <div className="hidden xl:flex">
-        <DesktopNav />
+        <DesktopNav links={links} />
       </div>
       <div className="xl:hidden">
         <MobileNav />
