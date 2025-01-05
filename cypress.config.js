@@ -7,4 +7,15 @@ export default defineConfig({
       bundler: "vite",
     },
   },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+    baseUrl: "http://localhost:3000",
+    viewportWidth: 1536,
+    env: {
+      mobileViewportWidthBreakpoint: 1280,
+    },
+  },
 });
