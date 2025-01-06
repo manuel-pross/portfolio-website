@@ -1,19 +1,19 @@
-import { CiMenuFries } from "react-icons/ci";
 import { NavBarLink } from "../../../../types";
+import BurgerIcon from "../../../ui/burgerIcon";
 
 type MobileNavProps = {
   links: NavBarLink[];
 };
 
 const MobileNav = ({ links }: MobileNavProps) => {
+  const handleBtnClick = () => {
+    console.log("click");
+  };
+
   return (
     <>
-      <CiMenuFries
-        className="text-4xl"
-        role="button"
-        data-cy="mobile-nav-fries"
-      />
-      <ul data-testid="mobile-nav" data-cy="mobile-nav-links">
+      <BurgerIcon />
+      <ul data-testid="mobile-nav" data-cy="mobile-nav-links" className="">
         {links.map((link) => {
           return (
             <li key={link.label}>
