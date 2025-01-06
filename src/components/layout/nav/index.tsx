@@ -11,10 +11,18 @@ const links: NavBarLink[] = [
 const Nav = () => {
   return (
     <>
-      <div className="hidden xl:flex" data-testid="desktop-nav-wrapper">
+      <div
+        className="hidden xl:flex"
+        data-testid="desktop-nav-wrapper"
+        data-cy="desktop-nav"
+      >
         <DesktopNav links={links} />
       </div>
-      <div className="xl:hidden" data-testid="mobile-nav-wrapper">
+      <div
+        className="xl:hidden"
+        data-testid="mobile-nav-wrapper"
+        data-cy="mobile-nav"
+      >
         <MobileNav links={links} />
       </div>
     </>

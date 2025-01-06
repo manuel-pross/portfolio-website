@@ -5,5 +5,5 @@ declare namespace Cypress {
 }
 
 Cypress.Commands.add("dataCy", (value, timeout) => {
-  cy.get(`[data-cy="${value}"]`, { timeout });
+  cy.get(`[data-cy="${value}"]`, timeout);
 });

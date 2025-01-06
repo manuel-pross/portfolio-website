@@ -6,7 +6,11 @@ type DesktopNavProps = {
 
 const DesktopNav = ({ links }: DesktopNavProps) => {
   return (
-    <ul className="flex gap-8" data-testid="desktop-nav">
+    <ul
+      className="flex gap-8"
+      data-testid="desktop-nav"
+      data-cy="desktop-nav-links"
+    >
       {links.map((link) => {
         return (
           <li key={link.label}>
