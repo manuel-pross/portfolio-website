@@ -17,4 +17,16 @@
     font-family: "Fira Code Regular", system-ui, sans-serif;
     @apply block bg-tokyo-night text-tokyo-white;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Fira code SemiBold";
+  }
+
+  .burger-icon-stroke {
+    @apply absolute bg-tokyo-green transition-transform duration-500;
+  }
 }
