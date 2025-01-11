@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 type BurgerIconProps = {
   onStatusChange: (isOpen: boolean) => void;
@@ -6,6 +6,8 @@ type BurgerIconProps = {
 
 const BurgerIcon = ({ onStatusChange }: BurgerIconProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const burgerBgColor = { backgroundColor: isOpen ? "#f7768e" : "" };
 
   const handleChange = () => {
     setIsOpen(!isOpen);
@@ -20,9 +22,15 @@ const BurgerIcon = ({ onStatusChange }: BurgerIconProps) => {
         defaultChecked={false}
         onChange={handleChange}
       />
-      <span className="burger-icon-stroke w-[30px] h-[5px] origin-bottom-left peer-checked:rotate-45 peer-checked:scale-x-[1.07]"></span>
+      <span
+        className="burger-icon-stroke w-[30px] h-[5px] origin-bottom-left peer-checked:rotate-45 peer-checked:scale-x-[1.07]"
+        style={burgerBgColor}
+      ></span>
       <span className="burger-icon-stroke top-3 w-6 h-[5px] peer-checked:scale-x-0"></span>
-      <span className="burger-icon-stroke top-6 w-[30px] h-[5px] origin-top-left peer-checked:rotate-[-45deg] peer-checked:scale-x-[1.07]"></span>
+      <span
+        className="burger-icon-stroke top-6 w-[30px] h-[5px] origin-top-left peer-checked:rotate-[-45deg] peer-checked:scale-x-[1.07]"
+        style={burgerBgColor}
+      ></span>
     </div>
   );
 };
