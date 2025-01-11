@@ -15,7 +15,7 @@ const BurgerIcon = ({ onStatusChange }: BurgerIconProps) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-[30px] h-[30px]">
       <input
         className="peer absolute z-10 opacity-0 block h-[30px] w-[30px] cursor-pointer"
         type="checkbox"
