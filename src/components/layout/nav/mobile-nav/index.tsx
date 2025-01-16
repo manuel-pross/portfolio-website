@@ -18,21 +18,23 @@ const MobileNav = ({ links }: MobileNavProps) => {
   };
   return (
     <>
-      <div className="absolute right-0">
+      <div className="absolute top-4 right-4">
         <BurgerIcon onStatusChange={handleMenuChange} />
       </div>
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="h-full pt-6"
+            className="h-full pt-16 px-12"
             data-testid="mobile-nav"
             data-cy="mobile-nav-links"
             initial={{ opacity: 0, x: 20, backgroundColor: "#1a1b26" }}
             animate={{ opacity: 1, x: 0, backgroundColor: "#24283b" }}
             exit={{ opacity: 0, x: 20 }}
           >
-            <h2>Manuel.</h2>
-            <ul className="flex flex-col justify-center gap-4 text-lg text-center pt-10">
+            <h2 className="text-3xl font-semibold text-center">
+              Manuel<span className="text-tokyo-green">.</span>
+            </h2>
+            <ul className="flex flex-col justify-center gap-20 h-full text-lg text-center pt-10">
               {links.map((link) => {
                 return (
                   <li className="" key={link.label}>

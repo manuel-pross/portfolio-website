@@ -7,7 +7,7 @@ type BurgerIconProps = {
 const BurgerIcon = ({ onStatusChange }: BurgerIconProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const burgerBgColor = { backgroundColor: isOpen ? "#f7768e" : "" };
+  const burgerBgColor = { backgroundColor: isOpen ? "#f7768e" : "#9ece6a" };
 
   const handleChange = () => {
     setIsOpen(!isOpen);
@@ -15,7 +15,7 @@ const BurgerIcon = ({ onStatusChange }: BurgerIconProps) => {
   };
 
   return (
-    <div className="relative w-[30px] h-[30px]">
+    <div className="relative z-[5] w-[30px] h-[30px]">
       <input
         className="peer absolute z-10 opacity-0 block h-[30px] w-[30px] cursor-pointer"
         type="checkbox"
