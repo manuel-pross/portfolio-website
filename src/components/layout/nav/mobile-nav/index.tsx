@@ -24,7 +24,7 @@ const MobileNav = ({ links }: MobileNavProps) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="h-full pt-16 px-12"
+            className="flex flex-col h-full pt-16 px-12"
             data-testid="mobile-nav"
             data-cy="mobile-nav-links"
             initial={{ opacity: 0, x: 20, backgroundColor: "#1a1b26" }}
@@ -34,7 +34,7 @@ const MobileNav = ({ links }: MobileNavProps) => {
             <h2 className="text-3xl font-semibold text-center">
               Manuel<span className="text-tokyo-green">.</span>
             </h2>
-            <ul className="flex flex-col justify-center gap-20 h-full text-lg text-center pt-10">
+            <ul className="flex flex-col justify-center gap-20 flex-grow text-lg text-center">
               {links.map((link) => {
                 return (
                   <li className="" key={link.label}>
