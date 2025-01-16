@@ -19,7 +19,7 @@ const Nav = () => {
         <DesktopNav links={links} />
       </div>
       <div
-        className="h-screen bg-tokyo-storm xl:hidden"
+        className="h-screen xl:hidden"
         data-testid="mobile-nav-wrapper"
         data-cy="mobile-nav"
       >

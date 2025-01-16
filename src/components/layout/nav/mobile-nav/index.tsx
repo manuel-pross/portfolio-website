@@ -24,15 +24,15 @@ const MobileNav = ({ links }: MobileNavProps) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="pt-6"
+            className="h-full pt-6"
             data-testid="mobile-nav"
             data-cy="mobile-nav-links"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20, backgroundColor: "#1a1b26" }}
+            animate={{ opacity: 1, x: 0, backgroundColor: "#24283b" }}
             exit={{ opacity: 0, x: 20 }}
           >
             <h2>Manuel.</h2>
-            <ul className="flex flex-col justify-center gap-4 h-full text-lg text-center pt-10">
+            <ul className="flex flex-col justify-center gap-4 text-lg text-center pt-10">
               {links.map((link) => {
                 return (
                   <li className="" key={link.label}>
