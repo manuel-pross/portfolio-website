@@ -1,13 +1,15 @@
+import Profile from "@/components/layout/profile";
 import Nav from "../nav";
-import Profile from "../profile";
 
 const Header = () => {
   return (
-    <header className="relative flex justify-between items-center pt-3 px-4">
-      <h1 className="text-4xl font-semibold">
-        Manuel<span className="text-tokyo-green">.</span>
-      </h1>
-      <Nav />
+    <header className="">
+      <div className="relative flex justify-between items-center pt-3 px-4">
+        <h1 className="h1">
+          Manuel<span className="text-tokyo-green">.</span>
+        </h1>
+        <Nav />
+      </div>
       <Profile />
     </header>
   );
