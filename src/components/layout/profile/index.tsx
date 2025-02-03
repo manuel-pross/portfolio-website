@@ -1,12 +1,12 @@
-import { IconContext } from "react-icons";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import imageUrl from "@/assets/images/profile_image.png";
+import Socials from "@/components/ui/socials";
 
 function Profile() {
   return (
-    <article className="flex flex-col">
+    <article className="flex flex-col items-center">
       <img
-        className="mb-4"
-        src="./dist/assets/photo.jpg"
+        className="w-[300px] mb-5 mix-blend-lighten"
+        src={imageUrl}
         alt="A photo of myself"
       />
       <h2 className="h4 text-center">Frontend Developer</h2>
@@ -19,28 +19,7 @@ function Profile() {
         necessitatibus magnam alias quod? Quas amet maxime at numquam vitae
         ratione, alias voluptatibus.
       </p>
-      <ul className="flex gap-3 justify-center">
-        <IconContext.Provider
-          value={{
-            className: "w-8 h-8 text-tokyo-green",
-          }}
-        >
-          <li>
-            <a href="https://github.com/manuel-pross">
-              <div className="border-2 border-tokyo-green rounded-full p-2">
-                <FaGithub />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/manuel-proß-a2059b2b7">
-              <div className="border-2 border-tokyo-green rounded-full p-2">
-                <FaLinkedinIn />
-              </div>
-            </a>
-          </li>
-        </IconContext.Provider>
-      </ul>
+      <Socials />
     </article>
   );
 }
