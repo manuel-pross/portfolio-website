@@ -14,16 +14,17 @@ function Socials() {
     <ul className="flex gap-3 justify-center">
       <IconContext.Provider
         value={{
-          className: "w-8 h-8 text-tokyo-green",
+          className:
+            "w-8 h-8 text-tokyo-green group-hover:text-tokyo-text transition-all duration-500 ease-in-out",
         }}
       >
         {socialLinks.map((social) => {
           return (
             <li key={social.url}>
               <a href={social.url}>
-                <div className="border-2 border-tokyo-green rounded-full p-2">
+                <span className="group block border-2 border-tokyo-green rounded-full p-2 hover:border-tokyo-text hover:text-tokyo-text transition-all duration-500">
                   {social.icon}
-                </div>
+                </span>
               </a>
             </li>
           );
