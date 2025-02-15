@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --font-*: initial;
@@ -35,6 +35,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -46,14 +47,14 @@
 
 @layer utilities {
   @font-face {
-    font-family: 'Fira Code Regular';
-    src: local('FiraCode-Regular'), url('./assets/fonts/FiraCode-Regular.ttf');
+    font-family: "Fira Code Regular";
+    src: local("FiraCode-Regular"), url("./assets/fonts/FiraCode-Regular.ttf");
   }
 
   @font-face {
-    font-family: 'Fira Code SemiBold';
+    font-family: "Fira Code SemiBold";
     src:
-      local('FiraCode-SemiBold'), url('./assets/fonts/FiraCode-SemiBold.ttf');
+      local("FiraCode-SemiBold"), url("./assets/fonts/FiraCode-SemiBold.ttf");
   }
 }
 
@@ -108,5 +109,9 @@
 
   .burger-icon-stroke {
     @apply absolute bg-tokyo-green transition-transform duration-500;
+  }
+
+  .radial-gradient {
+    background: radial-gradient(circle, rgba(26, 27, 38, 0) 40%, #1a1b26 80%);
   }
 }
