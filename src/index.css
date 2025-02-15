@@ -111,7 +111,14 @@
     @apply absolute bg-tokyo-green transition-transform duration-500;
   }
 
-  .radial-gradient {
-    background: radial-gradient(circle, rgba(26, 27, 38, 0) 40%, #1a1b26 80%);
+  .mask-radial {
+    mask-image: radial-gradient(circle,
+        rgba(0, 0, 0, 1) 42%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 0.4) 64%,
+        rgba(0, 0, 0, 0.2) 68%,
+        rgba(0, 0, 0, 0) 69%);
+
+    background-color: #1a1b26;
   }
 }
