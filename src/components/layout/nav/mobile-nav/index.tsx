@@ -15,7 +15,7 @@ const MobileNav = ({ links }: MobileNavProps) => {
   };
   return (
     <>
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-6 md:top-8">
         <BurgerIcon onStatusChange={handleMenuChange} />
       </div>
       <AnimatePresence>

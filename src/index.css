@@ -65,7 +65,7 @@
   }
 
   body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden py-4 px-6 md:py-8;
   }
 
   img {

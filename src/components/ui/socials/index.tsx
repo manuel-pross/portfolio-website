@@ -15,7 +15,7 @@ function Socials() {
       <IconContext.Provider
         value={{
           className:
-            "w-8 h-8 text-tokyo-green group-hover:text-tokyo-text transition-all duration-500 ease-in-out",
+            "w-6 h-6 text-tokyo-green group-hover:text-tokyo-text transition-all duration-500 ease-in-out md:w-8 md:h-8",
         }}
       >
         {socialLinks.map((social) => {

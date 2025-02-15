@@ -5,7 +5,7 @@ function Profile() {
   return (
     <article className="flex flex-col items-center gap-6 xl:flex-row">
       <div>
-        <h2 className="h4 text-center">Frontend Developer</h2>
+        <h2 className="h4 text-center mb-2">Frontend Developer</h2>
         <h1 className="h1 text-center">
           Hallo ich bin <span className="text-tokyo-green">Manuel Proß</span>
         </h1>
