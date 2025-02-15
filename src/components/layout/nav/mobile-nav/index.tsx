@@ -31,7 +31,7 @@ const MobileNav = ({ links }: MobileNavProps) => {
             <h2 className="text-3xl font-semibold text-center">
               Manuel<span className="text-tokyo-green">.</span>
             </h2>
-            <ul className="flex flex-col justify-center gap-20 flex-grow text-lg text-center">
+            <ul className="flex flex-col justify-center gap-20 grow text-lg text-center">
               {links.map((link) => {
                 return (
                   <li className="" key={link.label}>
