@@ -11,7 +11,7 @@ function ProfilePhoto() {
       }}
     >
       <img
-        className="w-[298px] h-auto xl:w-[498px] my-0 mx-auto radial-gradient"
+        className="w-[298px] md:w-[498px] h-auto my-0 mx-auto"
         src={imageUrl}
         alt="A personal photo of Manuel Proß"
       />
