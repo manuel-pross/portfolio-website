@@ -1,10 +1,19 @@
+import TabButton from "@/components/ui/tabbutton";
+import { ResumeItem, Tab } from "@/types";
 import { FaAngular, FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
-const about = {
+const tabs: Tab[] = [
+  { id: 1, name: "Experience" },
+  { id: 2, name: "Education" },
+  { id: 3, name: "Skills" },
+  { id: 4, name: "About me" },
+];
+
+const about: ResumeItem = {
   title: "Über mich",
   description: "Lorem Ipsum",
-  infos: [
+  items: [
     { fieldName: "Name", fieldValue: "Manuel Roman Proß" },
     { fieldName: "Arbeitserfahrung", fieldValue: "3+ Jahre" },
     { fieldName: "Nationalität", fieldValue: "Deutsch" },
@@ -13,34 +22,34 @@ const about = {
   ],
 };
 
-const experience = {
+const experience: ResumeItem = {
   title: "Professionelle Erfahrung",
   description: "Lorem Ipsum",
   items: [
     {
-      institution: "Flip GmbH",
+      name: "Flip GmbH",
       position: "Frontendentwickler (Werkstudent)",
       duration: "2022 - 2024",
     },
     {
-      institution: "Sick AG",
+      name: "Sick AG",
       position: "Softwareentwickler (Werkstudent)",
       duration: "2020 - 2021",
     },
     {
-      institution: "dreiQBIK GmbH",
+      name: "dreiQBIK GmbH",
       position: "Frontendentwickler (Praktikant)",
       duration: "2019 - 2020",
     },
     {
-      institution: "CAT",
+      name: "CAT",
       position: "Softwareentwickler (Praktikant)",
       duration: "2016 - 2017",
     },
   ],
 };
 
-const skills = {
+const skills: ResumeItem = {
   title: "Meine Skills",
   description: "Lorem Ipsum",
   items: [
@@ -75,22 +84,22 @@ const skills = {
   ],
 };
 
-const education = {
+const education: ResumeItem = {
   title: "Bildung",
   description: "Lorem Ipsum",
   items: [
     {
-      institution: "Fachhochschule Salzburg",
+      name: "Fachhochschule Salzburg",
       position: "MultiMediaTechnology (Web Engineering), M. Sc.",
       duration: "2022 - 2024",
     },
     {
-      institution: "Hochschule Furtwangen",
+      name: "Hochschule Furtwangen",
       position: "Medieninformatik, B. Sc.",
       duration: "2018 - 2022",
     },
     {
-      institution: "Akademie für Datenverarabeitung",
+      name: "Akademie für Datenverarabeitung",
       position:
         "Staatlich geprüfter Informatiker (Fachrichtung: Medien), Ausbildung",
       duration: "2015 - 2018",
@@ -101,7 +110,12 @@ const education = {
 function Resume() {
   return (
     <section>
-      <h2 className="h2">Work Experience</h2>
+      <h2 className="h2 text-center lg:text-left">Work Experience</h2>
+      <div className="flex flex-col gap-6">
+        {tabs.map((tab) => (
+          <TabButton text={tab.name} key={tab.id} />
+        ))}
+      </div>
     </section>
   );
 }
