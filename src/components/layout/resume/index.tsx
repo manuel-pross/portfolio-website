@@ -1,4 +1,4 @@
-import TabButton from "@/components/ui/tabbutton";
+import TabButton from "@/components/ui/tab-button";
 import { ResumeItem, Tab } from "@/types";
 import { FaAngular, FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
