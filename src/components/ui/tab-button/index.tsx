@@ -7,7 +7,11 @@ function TabButton({ text, onClick }: TabButtonProps) {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (!onClick) return;
 
-    onClick(event.currentTarget.value);
+    const btnText = event.currentTarget.textContent;
+
+    if (!btnText) return;
+
+    onClick(btnText);
   };
 
   return (
