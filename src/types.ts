@@ -11,17 +11,20 @@ export type Tab = {
 };
 
 export type PersonalNote = {
+  id: number;
   fieldName: string;
   fieldValue: string;
 };
 
 export type Institution = {
+  id: number;
   name: string;
   position: string;
   duration: string;
 };
 
 export type Skill = {
+  id: number;
   icon: ReactElement;
   name: string;
 };

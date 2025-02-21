@@ -1,4 +1,142 @@
+import AboutMe from "@/components/layout/about-me";
+import Education from "@/components/layout/education";
+import Experience from "@/components/layout/experience";
+import Skills from "@/components/layout/skills";
 import useSelectedTabStore from "@/stores/selectedTabStore";
+import { Institution, PersonalNote, ResumeItem, Skill } from "@/types";
+import { FaAngular, FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
+
+const about: ResumeItem & { items: PersonalNote[] } = {
+  title: "Über mich",
+  description: "Lorem Ipsum",
+  items: [
+    {
+      id: 1,
+      fieldName: "Name",
+      fieldValue: "Manuel Roman Proß",
+    },
+    {
+      id: 2,
+      fieldName: "Arbeitserfahrung",
+      fieldValue: "3+ Jahre",
+    },
+    {
+      id: 3,
+      fieldName: "Nationalität",
+      fieldValue: "Deutsch",
+    },
+    {
+      id: 4,
+      fieldName: "Email",
+      fieldValue: "pro_manuel@yahoo.de",
+    },
+    {
+      id: 5,
+      fieldName: "Sprachen",
+      fieldValue: "Englisch (B2), Deutsch",
+    },
+  ],
+};
+
+const experience: ResumeItem & { items: Institution[] } = {
+  title: "Professionelle Erfahrung",
+  description: "Lorem Ipsum",
+  items: [
+    {
+      id: 1,
+      name: "Flip GmbH",
+      position: "Frontendentwickler (Werkstudent)",
+      duration: "2022 - 2024",
+    },
+    {
+      id: 2,
+      name: "Sick AG",
+      position: "Softwareentwickler (Werkstudent)",
+      duration: "2020 - 2021",
+    },
+    {
+      id: 3,
+      name: "dreiQBIK GmbH",
+      position: "Frontendentwickler (Praktikant)",
+      duration: "2019 - 2020",
+    },
+    {
+      id: 4,
+      name: "CAT",
+      position: "Softwareentwickler (Praktikant)",
+      duration: "2016 - 2017",
+    },
+  ],
+};
+
+const skills: ResumeItem & { items: Skill[] } = {
+  title: "Meine Skills",
+  description: "Lorem Ipsum",
+  items: [
+    {
+      id: 1,
+      icon: <FaHtml5 />,
+      name: "HTML 5",
+    },
+    {
+      id: 2,
+      icon: <FaCss3 />,
+      name: "CSS 3",
+    },
+    {
+      id: 3,
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
+    },
+    {
+      id: 4,
+      icon: <FaJs />,
+      name: "JavaScript",
+    },
+    {
+      id: 5,
+      icon: <SiTypescript />,
+      name: "TypeScrpt",
+    },
+    {
+      id: 6,
+      icon: <FaAngular />,
+      name: "Angular",
+    },
+    {
+      id: 7,
+      icon: <FaReact />,
+      name: "React",
+    },
+  ],
+};
+
+const education: ResumeItem & { items: Institution[] } = {
+  title: "Bildung",
+  description: "Lorem Ipsum",
+  items: [
+    {
+      id: 1,
+      name: "Fachhochschule Salzburg",
+      position: "MultiMediaTechnology (Web Engineering), M. Sc.",
+      duration: "2022 - 2024",
+    },
+    {
+      id: 2,
+      name: "Hochschule Furtwangen",
+      position: "Medieninformatik, B. Sc.",
+      duration: "2018 - 2022",
+    },
+    {
+      id: 3,
+      name: "Akademie für Datenverarabeitung",
+      position:
+        "Staatlich geprüfter Informatiker (Fachrichtung: Medien), Ausbildung",
+      duration: "2015 - 2018",
+    },
+  ],
+};
 
 function TabContent() {
   const selectedTab = useSelectedTabStore((state) => state.selectedTab);
@@ -7,9 +145,17 @@ function TabContent() {
     let content = undefined;
     switch (selectedTab) {
       case "Experience":
-        content = <p>Experience</p>;
+        content = <Experience content={experience} />;
         break;
-
+      case "Education":
+        content = <Education />;
+        break;
+      case "Skills":
+        content = <Skills />;
+        break;
+      case "About me":
+        content = <AboutMe />;
+        break;
       default:
         content = <p>No tab selected</p>;
         break;
