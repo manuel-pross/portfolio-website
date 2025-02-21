@@ -151,7 +151,7 @@ function TabContent() {
         content = <Experience content={education} />;
         break;
       case "Skills":
-        content = <Skills />;
+        content = <Skills content={skills} />;
         break;
       case "About me":
         content = <AboutMe />;
