@@ -83,7 +83,7 @@
   h5,
   h6 {
     font-family: "Fira code SemiBold";
-    @apply font-semibold;
+    @apply font-semibold text-center lg:text-left;
   }
 
   .h1 {

@@ -20,13 +20,13 @@ function Resume() {
   };
 
   return (
-    <section>
-      <h2 className="h2 text-center lg:text-left">Work Experience</h2>
-      <div className="flex flex-col gap-6">
+    <section className="grid grid-cols-1 lg:grid-cols-[30%_70%] lg:gap-8 xl:gap-12">
+      <div className="flex flex-col gap-6 mb-8 xl:mb-0">
         {tabBtns.map((tabBtn) => (
           <TabButton key={tabBtn.id} text={tabBtn.name} onClick={handleClick} />
         ))}
       </div>
+
       <TabContent />
     </section>
   );
