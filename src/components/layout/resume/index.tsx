@@ -20,7 +20,7 @@ function Resume() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-[30%_70%] lg:gap-8 xl:gap-12">
+    <section className="grid grid-cols-1 lg:grid-cols-[30%_70%] lg:gap-8 xl:gap-16 max-w-[1500px]">
       <div className="flex flex-col gap-6 mb-8 xl:mb-0">
         {tabBtns.map((tabBtn) => (
           <TabButton key={tabBtn.id} text={tabBtn.name} onClick={handleClick} />
