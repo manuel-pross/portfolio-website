@@ -15,7 +15,7 @@ function Skills({ content }: SkillsProps) {
             className="group relative text-6xl p-10 md:p-12 bg-tokyo-storm rounded-xl hover:text-tokyo-green transition-all ease-in-out delay-150"
             key={item.id}
           >
-            <span className="absolute top-1 left-0 z-10 hidden opacity-0 group-hover:opacity-100 group-hover:block w-full text-lg text-center text-tokyo-white">
+            <span className="absolute top-1 left-0 z-10 opacity-0 group-hover:opacity-100 w-full text-lg text-center text-tokyo-white transition-opacity ease-in-out delay-150">
               {item.name}
             </span>
             {item.icon}
