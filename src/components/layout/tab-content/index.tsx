@@ -1,5 +1,4 @@
 import AboutMe from "@/components/layout/about-me";
-import Education from "@/components/layout/education";
 import Experience from "@/components/layout/experience";
 import Skills from "@/components/layout/skills";
 import useSelectedTabStore from "@/stores/selectedTabStore";
@@ -154,7 +153,7 @@ function TabContent() {
         content = <Skills content={skills} />;
         break;
       case "About me":
-        content = <AboutMe />;
+        content = <AboutMe content={about} />;
         break;
       default:
         content = <p>No tab selected</p>;
