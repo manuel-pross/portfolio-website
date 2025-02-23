@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
 
 @theme {
   --font-*: initial;
@@ -121,4 +125,42 @@
 
     background-color: #1a1b26;
   }
+}
+
+.text-outline-white {
+  color: #1a1b26;
+  background-color: #1a1b26;
+  text-shadow:
+    -2px -2px 0 #c0caf5,
+    /* Top-left */
+    -1px -2px 0 #c0caf5,
+    /* Slightly less top-left */
+    0px -2px 0 #c0caf5,
+    /* Top */
+    1px -2px 0 #c0caf5,
+    /* Slightly less top-right */
+    2px -2px 0 #c0caf5,
+    /* Top-right */
+    -2px -1px 0 #c0caf5,
+    /* Left-top */
+    -2px 0px 0 #c0caf5,
+    /* Left */
+    -2px 1px 0 #c0caf5,
+    /* Left-bottom */
+    -2px 2px 0 #c0caf5,
+    /* Bottom-left */
+    -1px 2px 0 #c0caf5,
+    /* Slightly less bottom-left */
+    0px 2px 0 #c0caf5,
+    /* Bottom */
+    1px 2px 0 #c0caf5,
+    /* Slightly less bottom-right */
+    2px 2px 0 #c0caf5,
+    /* Bottom-right */
+    2px 1px 0 #c0caf5,
+    /* Right-bottom */
+    2px 0px 0 #c0caf5,
+    /* Right */
+    2px -1px 0 #c0caf5;
+  /* Right-top */
 }

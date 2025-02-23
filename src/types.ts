@@ -34,3 +34,14 @@ export type ResumeItem = {
   description: string;
   items: PersonalNote[] | Institution[] | Skill[];
 };
+
+export type Project = {
+  id: number;
+  category: string;
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;
+  liveLink?: string;
+  githubLink: string;
+};
