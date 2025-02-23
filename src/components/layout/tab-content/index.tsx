@@ -27,11 +27,6 @@ const about: ResumeItem & { items: PersonalNote[] } = {
     },
     {
       id: 4,
-      fieldName: "Email",
-      fieldValue: "pro_manuel@yahoo.de",
-    },
-    {
-      id: 5,
       fieldName: "Sprachen",
       fieldValue: "Englisch (B2), Deutsch",
     },
