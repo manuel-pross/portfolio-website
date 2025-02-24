@@ -35,12 +35,17 @@ export type ResumeItem = {
   items: PersonalNote[] | Institution[] | Skill[];
 };
 
+export type Technology = {
+  id: number;
+  name: string;
+};
+
 export type OpenSrcProject = {
   id: number;
   category: string;
   title: string;
   description: string;
-  stack: string[];
+  stack: Technology[];
   image: string;
   liveLink?: string;
   githubLink: string;

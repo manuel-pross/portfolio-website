@@ -7,3 +7,13 @@ export function prependZeros(id: number, maxLength: number): string {
 
   return transformedId;
 }
+
+export function truncateText(text: string, maxLength = 30): string {
+  let truncatedString = "";
+
+  if (text.length <= maxLength) return text;
+
+  truncatedString = text.slice(0, maxLength);
+
+  return truncatedString + "...";
+}
