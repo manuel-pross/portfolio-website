@@ -35,7 +35,7 @@ export type ResumeItem = {
   items: PersonalNote[] | Institution[] | Skill[];
 };
 
-export type Project = {
+export type OpenSrcProject = {
   id: number;
   category: string;
   title: string;
