@@ -91,7 +91,7 @@ const skills: ResumeItem & { items: Skill[] } = {
     {
       id: 5,
       icon: <SiTypescript />,
-      name: "TypeScrpt",
+      name: "TypeScript",
     },
     {
       id: 6,
