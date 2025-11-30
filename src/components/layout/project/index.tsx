@@ -11,18 +11,25 @@ type ProjectProps = {
 export function Project({ project }: ProjectProps) {
   return (
     <div>
-      <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-center lg:text-left">
-        {prependZeros(project.id, 2)}
-      </p>
-      <h3 className="h2">{project.title}</h3>
-      <p>{truncateText(project.description, 100)}</p>
-      <ul className="flex gap-5 text-xl mb-5">
-        {project.stack.map((technology) => (
-          <li className="text-tokyo-green" key={technology.id}>
-            {technology.name}
-          </li>
-        ))}
-      </ul>
+      <div className="flex">
+        <div>
+          <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-center lg:text-left">
+            {prependZeros(project.id, 2)}
+          </p>
+          <h3 className="h2">{project.title}</h3>
+          <p>{truncateText(project.description, 100)}</p>
+          <ul className="flex gap-5 text-xl mb-5">
+            {project.stack.map((technology) => (
+              <li className="text-tokyo-green" key={technology.id}>
+                {technology.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <img src={project.image} alt="Screenshot of project" />
+        </div>
+      </div>
       <hr className="border-tokyo-white opacity-50 mb-5" />
       <div className="flex gap-3">
         <IconContext.Provider

@@ -1,3 +1,4 @@
+import imageUrl from "@/assets/images/project_image.jpg";
 import Project from "@/components/layout/project";
 import { OpenSrcProject } from "@/types";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
@@ -15,7 +16,7 @@ const projects: OpenSrcProject[] = [
       { id: 2, name: "tailwind" },
       { id: 3, name: "vite" },
     ],
-    image: "test",
+    image: imageUrl,
     liveLink: "test",
     githubLink: "test",
   },
@@ -30,7 +31,7 @@ const projects: OpenSrcProject[] = [
       { id: 2, name: "tailwind" },
       { id: 3, name: "vite" },
     ],
-    image: "test",
+    image: imageUrl,
     liveLink: "test",
     githubLink: "test",
   },
@@ -46,7 +47,7 @@ const projects: OpenSrcProject[] = [
       { id: 3, name: "vite" },
     ],
 
-    image: "test",
+    image: imageUrl,
     liveLink: "test",
     githubLink: "test",
   },
@@ -55,14 +56,11 @@ const projects: OpenSrcProject[] = [
 function ProjectOverview() {
   return (
     <div>
-      hello from swiper
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={25}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >

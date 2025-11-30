@@ -164,3 +164,19 @@
     2px -1px 0 #c0caf5;
   /* Right-top */
 }
+
+.swiper-button-prev {
+  left: 90% !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: unset !important;
+  bottom: 0 !important;
+  @apply bg-tokyo-green w-12 h-12;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  @apply text-tokyo-storm w-6 h-6;
+}
