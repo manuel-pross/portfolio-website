@@ -67,7 +67,7 @@ function ProjectOverview() {
         onSlideChange={() => console.log("slide change")}
       >
         {projects.map((project) => (
-          <SwiperSlide>
+          <SwiperSlide key={project.id}>
             <Project project={project} />
           </SwiperSlide>
         ))}
