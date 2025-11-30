@@ -39,24 +39,30 @@ const experience: ResumeItem & { items: Institution[] } = {
   items: [
     {
       id: 1,
+      name: "Mercedes-Benz Consulting",
+      position: "Junior Frontendentwickler und Consultant",
+      duration: "2025 - heute",
+    },
+    {
+      id: 2,
       name: "Flip GmbH",
       position: "Frontendentwickler (Werkstudent)",
       duration: "2022 - 2024",
     },
     {
-      id: 2,
+      id: 3,
       name: "Sick AG",
       position: "Softwareentwickler (Werkstudent)",
       duration: "2020 - 2021",
     },
     {
-      id: 3,
+      id: 4,
       name: "dreiQBIK GmbH",
       position: "Frontendentwickler (Praktikant)",
       duration: "2019 - 2020",
     },
     {
-      id: 4,
+      id: 5,
       name: "CAT",
       position: "Softwareentwickler (Praktikant)",
       duration: "2016 - 2017",
