@@ -11,12 +11,12 @@ type ProjectProps = {
 export function Project({ project }: ProjectProps) {
   return (
     <div>
-      <div className="flex">
+      <div className="flex gap-4">
         <div>
-          <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-center lg:text-left">
+          <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-left">
             {prependZeros(project.id, 2)}
           </p>
-          <h3 className="h2">{project.title}</h3>
+          <h3 className="h2 text-left">{project.title}</h3>
           <p>{truncateText(project.description, 100)}</p>
           <ul className="flex gap-5 text-xl mb-5">
             {project.stack.map((technology) => (
@@ -26,7 +26,7 @@ export function Project({ project }: ProjectProps) {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="flex items-center">
           <img src={project.image} alt="Screenshot of project" />
         </div>
       </div>

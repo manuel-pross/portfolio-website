@@ -6,7 +6,7 @@ type ExperienceProps = {
 
 function Experience({ content }: ExperienceProps) {
   return (
-    <article className="flex flex-col">
+    <article className="flex flex-col mb-8 md:mb-12">
       <h2 className="h3">{content.title}</h2>
       <p>{content.description}</p>
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-h-[400px] xl:max-h-[800px] overflow-y-auto">

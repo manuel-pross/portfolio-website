@@ -166,14 +166,15 @@
 }
 
 .swiper-button-prev {
-  left: 90% !important;
+  left: unset !important;
+  right: 75px !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   top: unset !important;
   bottom: 0 !important;
-  @apply bg-tokyo-green w-12 h-12;
+  @apply hidden bg-tokyo-green w-12 h-12 lg:flex;
 }
 
 .swiper-button-next svg,
