@@ -7,10 +7,10 @@ type SelectedTabStore = {
 };
 
 const useSelectedTabStore = create<SelectedTabStore>()((set) => ({
-  selectedTab: "Experience",
+  selectedTab: "experience",
   updateSelectedTab: (newSelectedTab: string) =>
     set(() => ({ selectedTab: newSelectedTab })),
-  resetSelectedTab: () => set({ selectedTab: "Experience" }),
+  resetSelectedTab: () => set({ selectedTab: "experience" }),
 }));
 
 export default useSelectedTabStore;

@@ -11,7 +11,7 @@ type ProjectProps = {
 export function Project({ project }: ProjectProps) {
   return (
     <div>
-      <div className="flex gap-4">
+      <div className="flex flex-col lg:flex-row gap-4">
         <div>
           <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-left">
             {prependZeros(project.id, 2)}

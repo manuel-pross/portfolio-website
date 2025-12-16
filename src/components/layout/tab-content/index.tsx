@@ -144,16 +144,16 @@ function TabContent() {
   const getSelectedContent = (selectedTab: string) => {
     let content = undefined;
     switch (selectedTab) {
-      case "Experience":
+      case "experience":
         content = <Experience content={experience} />;
         break;
-      case "Education":
+      case "education":
         content = <Experience content={education} />;
         break;
-      case "Skills":
+      case "skills":
         content = <Skills content={skills} />;
         break;
-      case "About me":
+      case "aboutMe":
         content = <AboutMe content={about} />;
         break;
       default:
