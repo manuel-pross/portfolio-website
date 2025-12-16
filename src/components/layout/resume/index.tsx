@@ -23,7 +23,7 @@ function Resume() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-[30%_70%] mb-8 md:mb-12 max-w-[1500px] lg:gap-8 xl:gap-16 ">
+    <section className="grid grid-cols-1 lg:grid-cols-[30%_70%] mb-8 md:mb-12 max-w-[1500px] lg:h-[750px] lg:gap-8 xl:gap-16 ">
       <div className="flex flex-col gap-6 mb-8 xl:mb-0">
         {tabBtns.map((tabBtn) => (
           <TabButton
