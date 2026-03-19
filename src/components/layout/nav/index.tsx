@@ -3,9 +3,8 @@ import DesktopNav from "./desktop-nav";
 import MobileNav from "./mobile-nav";
 
 const links: NavBarLink[] = [
-  { label: "work experience", ref: "work-experience" },
-  { label: "education", ref: "education" },
-  { label: "projects", ref: "projects" },
+  { label: "Experience", ref: "#experience" },
+  { label: "projects", ref: "#projects" },
 ];
 
 const Nav = () => {

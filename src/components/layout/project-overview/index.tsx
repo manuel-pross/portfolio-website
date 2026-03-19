@@ -87,7 +87,7 @@ const projects: OpenSrcProject[] = [
 
 function ProjectOverview() {
   return (
-    <section>
+    <section id="projects">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={25}
