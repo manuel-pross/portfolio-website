@@ -10,8 +10,8 @@ type ProjectProps = {
 
 export function Project({ project }: ProjectProps) {
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row gap-4">
+    <div className="relative flex flex-col h-full w-full">
+      <div className="flex flex-col h-full w-full justify-between lg:flex-row lg:gap-5 lg:mb-5">
         <div>
           <p className="text-8xl leading-none font-extrabold text-outline-white text-transparent text-left">
             {prependZeros(project.id, 2)}
@@ -26,11 +26,11 @@ export function Project({ project }: ProjectProps) {
             ))}
           </ul>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mb-5 lg:mb-0">
           <img src={project.image} alt="Screenshot of project" />
         </div>
+        <hr className="hidden lg:block lg:border-tokyo-white lg:opacity-50 lg:mb-5" />
       </div>
-      <hr className="border-tokyo-white opacity-50 mb-5" />
       <div className="flex gap-3">
         <IconContext.Provider
           value={{

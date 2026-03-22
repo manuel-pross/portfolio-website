@@ -8,55 +8,52 @@ const projects: OpenSrcProject[] = [
   {
     id: 1,
     category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    title: "Portfolio Website",
+    description: "Diese Website",
     stack: [
       { id: 1, name: "react" },
       { id: 2, name: "tailwind" },
       { id: 3, name: "vite" },
     ],
     image: imageUrl,
-    liveLink: "test",
-    githubLink: "test",
+    liveLink: "",
+    githubLink: "https://github.com/manuel-pross/portfolio-website",
   },
   {
     id: 2,
     category: "frontend",
-    title: "project 1",
+    title: "Pokemon Dashboard",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "Dashboard mit Linking und Mapping zwischen den verschiedenen Diagrammen.",
     stack: [
       { id: 1, name: "react" },
-      { id: 2, name: "tailwind" },
-      { id: 3, name: "vite" },
+      { id: 2, name: "vite" },
+      { id: 3, name: "Chart.js" },
     ],
     image: imageUrl,
-    liveLink: "test",
-    githubLink: "test",
+    liveLink: "https://manuel-pross.github.io/dataVis_dashboard/",
+    githubLink: "https://github.com/manuel-pross/dataVis_dashboard",
   },
   {
     id: 3,
     category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    title: "Game of Life",
+    description: "Eine Rust und WebAssembly Implementation des Game of Life",
     stack: [
-      { id: 1, name: "react" },
-      { id: 2, name: "tailwind" },
-      { id: 3, name: "vite" },
+      { id: 1, name: "Rust" },
+      { id: 2, name: "WebAssembly" },
     ],
 
     image: imageUrl,
     liveLink: "test",
-    githubLink: "test",
+    githubLink: "https://github.com/manuel-pross/game_of_life",
   },
   {
     id: 4,
     category: "frontend",
-    title: "project 1",
+    title: "Custom Chrome Extension",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "Eine Chrome Extension zum schnellen Zugriff auf Browser Bookmarks",
     stack: [
       { id: 1, name: "react" },
       { id: 2, name: "tailwind" },
@@ -64,24 +61,8 @@ const projects: OpenSrcProject[] = [
     ],
 
     image: imageUrl,
-    liveLink: "test",
-    githubLink: "test",
-  },
-  {
-    id: 5,
-    category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    stack: [
-      { id: 1, name: "react" },
-      { id: 2, name: "tailwind" },
-      { id: 3, name: "vite" },
-    ],
-
-    image: imageUrl,
-    liveLink: "test",
-    githubLink: "test",
+    liveLink: "",
+    githubLink: "https://github.com/manuel-pross/new-tab-dashboard",
   },
 ];
 
@@ -102,11 +83,9 @@ function ProjectOverview() {
             navigation: { enabled: true },
           },
         }}
-      //onSwiper={(swiper) => console.log(swiper)}
-      //onSlideChange={() => console.log("slide change")}
       >
         {projects.map((project) => (
-          <SwiperSlide key={project.id}>
+          <SwiperSlide key={project.id} className="relative !h-auto">
             <Project project={project} />
           </SwiperSlide>
         ))}
