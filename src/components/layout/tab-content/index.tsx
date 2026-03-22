@@ -8,7 +8,7 @@ import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
 const about: ResumeItem & { items: PersonalNote[] } = {
   title: "Über mich",
-  description: "Lorem Ipsum",
+  description: "Frontendentwickler mit Interesse an Linux",
   items: [
     {
       id: 1,
@@ -35,7 +35,7 @@ const about: ResumeItem & { items: PersonalNote[] } = {
 
 const experience: ResumeItem & { items: Institution[] } = {
   title: "Professionelle Erfahrung",
-  description: "Lorem Ipsum",
+  description: "Frontend + CI/CD",
   items: [
     {
       id: 1,
