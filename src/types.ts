@@ -7,6 +7,7 @@ export type NavBarLink = {
 
 export type Tab = {
   id: number;
+  displayName: string;
   name: string;
 };
 

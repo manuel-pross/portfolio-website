@@ -8,7 +8,7 @@ import { SiTailwindcss, SiTypescript } from "react-icons/si";
 
 const about: ResumeItem & { items: PersonalNote[] } = {
   title: "Über mich",
-  description: "Lorem Ipsum",
+  description: "Frontendentwickler mit Interesse an Linux",
   items: [
     {
       id: 1,
@@ -35,28 +35,34 @@ const about: ResumeItem & { items: PersonalNote[] } = {
 
 const experience: ResumeItem & { items: Institution[] } = {
   title: "Professionelle Erfahrung",
-  description: "Lorem Ipsum",
+  description: "Frontend + CI/CD",
   items: [
     {
       id: 1,
+      name: "Mercedes-Benz Consulting",
+      position: "Junior Frontendentwickler und Consultant",
+      duration: "2025 - heute",
+    },
+    {
+      id: 2,
       name: "Flip GmbH",
       position: "Frontendentwickler (Werkstudent)",
       duration: "2022 - 2024",
     },
     {
-      id: 2,
+      id: 3,
       name: "Sick AG",
       position: "Softwareentwickler (Werkstudent)",
       duration: "2020 - 2021",
     },
     {
-      id: 3,
+      id: 4,
       name: "dreiQBIK GmbH",
       position: "Frontendentwickler (Praktikant)",
       duration: "2019 - 2020",
     },
     {
-      id: 4,
+      id: 5,
       name: "CAT",
       position: "Softwareentwickler (Praktikant)",
       duration: "2016 - 2017",
@@ -91,7 +97,7 @@ const skills: ResumeItem & { items: Skill[] } = {
     {
       id: 5,
       icon: <SiTypescript />,
-      name: "TypeScrpt",
+      name: "TypeScript",
     },
     {
       id: 6,
@@ -138,16 +144,16 @@ function TabContent() {
   const getSelectedContent = (selectedTab: string) => {
     let content = undefined;
     switch (selectedTab) {
-      case "Experience":
+      case "experience":
         content = <Experience content={experience} />;
         break;
-      case "Education":
+      case "education":
         content = <Experience content={education} />;
         break;
-      case "Skills":
+      case "skills":
         content = <Skills content={skills} />;
         break;
-      case "About me":
+      case "aboutMe":
         content = <AboutMe content={about} />;
         break;
       default:

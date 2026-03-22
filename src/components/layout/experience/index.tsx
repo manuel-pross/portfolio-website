@@ -9,7 +9,7 @@ function Experience({ content }: ExperienceProps) {
     <article className="flex flex-col">
       <h2 className="h3">{content.title}</h2>
       <p>{content.description}</p>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-h-[400px] xl:max-h-[800px] overflow-y-auto">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:h-[600px] overflow-y-auto">
         {content.items.map((item) => (
           <li
             className="block py-4 px-8 bg-tokyo-storm rounded-2xl"
