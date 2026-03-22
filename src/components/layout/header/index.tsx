@@ -1,5 +1,4 @@
 import Profile from "@/components/layout/profile";
-import Nav from "../nav";
 
 const Header = () => {
   return (
@@ -8,7 +7,7 @@ const Header = () => {
         <h1 className="h1 mb-0">
           Manuel<span className="text-tokyo-green">.</span>
         </h1>
-        <Nav />
+        {/* <Nav /> */}
       </div>
       <Profile />
     </header>
