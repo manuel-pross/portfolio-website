@@ -72,7 +72,7 @@ const experience: ResumeItem & { items: Institution[] } = {
 
 const skills: ResumeItem & { items: Skill[] } = {
   title: "Meine Skills",
-  description: "Lorem Ipsum",
+  description: "Frontendtechnologien und CI/CD",
   items: [
     {
       id: 1,
@@ -114,7 +114,7 @@ const skills: ResumeItem & { items: Skill[] } = {
 
 const education: ResumeItem & { items: Institution[] } = {
   title: "Bildung",
-  description: "Lorem Ipsum",
+  description: "Ausbildung, Bachelor und Master",
   items: [
     {
       id: 1,

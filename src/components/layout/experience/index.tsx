@@ -8,7 +8,7 @@ function Experience({ content }: ExperienceProps) {
   return (
     <article className="flex flex-col">
       <h2 className="h3">{content.title}</h2>
-      <p>{content.description}</p>
+      <p className="text-center lg:text-left">{content.description}</p>
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:h-[600px] overflow-y-auto">
         {content.items.map((item) => (
           <li
