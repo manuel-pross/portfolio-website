@@ -177,8 +177,9 @@
   @apply hidden bg-tokyo-green w-12 h-12 lg:flex;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper-button-next .swiper-navigation-icon,
+.swiper-button-prev .swiper-navigation-icon {
   @apply text-tokyo-storm;
-  --swiper-navigation-size: 31px;
+  width: 32px;
+  height: 32px;
 }
