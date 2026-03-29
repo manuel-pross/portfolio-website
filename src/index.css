@@ -183,3 +183,25 @@
   width: 32px;
   height: 32px;
 }
+
+/* Global Scrollbar Styles */
+
+/* Entire scrollbar */
+::-webkit-scrollbar {
+  @apply w-[10px];
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  @apply bg-tokyo-storm;
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  @apply bg-tokyo-green rounded-2xl;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-tokyo-white;
+}
