@@ -73,8 +73,7 @@ function ProjectOverview() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={25}
         centeredSlides
-        loop
-        slidesPerView={1.2}
+        slidesPerView="auto"
         navigation={{ enabled: false }}
         breakpoints={{
           1024: {
@@ -85,7 +84,10 @@ function ProjectOverview() {
         }}
       >
         {projects.map((project) => (
-          <SwiperSlide key={project.id} className="relative !h-auto">
+          <SwiperSlide
+            key={project.id}
+            className="custom-slide relative !h-auto"
+          >
             <Project project={project} />
           </SwiperSlide>
         ))}
