@@ -68,10 +68,6 @@
     @apply block bg-tokyo-night text-tokyo-white;
   }
 
-  body {
-    @apply overflow-x-hidden py-4 md:py-8 px-6 md:px-10 xl:px-28 my-0 mx-auto max-w-[2000px];
-  }
-
   img {
     @apply w-full h-auto;
   }
@@ -208,4 +204,12 @@
 /* Thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-tokyo-white;
+}
+
+a {
+  @apply text-tokyo-blue underline underline-offset-2 decoration-transparent transition-all duration-200;
+  @apply hover:text-tokyo-blue-light hover:decoration-tokyo-blue-light;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tokyo-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-tokyo-night;
+  @apply active:text-tokyo-cyan;
+  @apply visited:text-tokyo-purple;
 }

@@ -45,7 +45,6 @@ const projects: OpenSrcProject[] = [
     ],
 
     image: imageUrl,
-    liveLink: "test",
     githubLink: "https://github.com/manuel-pross/game_of_life",
   },
   {
@@ -68,7 +67,7 @@ const projects: OpenSrcProject[] = [
 
 function ProjectOverview() {
   return (
-    <section id="projects">
+    <section id="projects" className="mb-5">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={25}
